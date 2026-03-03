@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14 Recettes Protéinées — Larousse Fit</title>
+    <meta name="description" content="14 recettes protéinées gourmandes par Mathilde Vion, ingénieure nutrition et coach en ligne.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --orange-primary: #E8612D;
+            --orange-dark: #C94E1F;
+            --orange-light: #F4A261;
+            --orange-pale: #FDE8D8;
+            --orange-bg: #FFF6F0;
+            --teal: #2A9D8F;
+            --teal-light: #E6F5F3;
+            --dark: #2C2C2C;
+            --dark-secondary: #555;
+            --light-bg: #FAFAFA;
+            --white: #FFFFFF;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.08);
+            --shadow-lg: 0 8px 40px rgba(0,0,0,0.12);
+            --radius: 16px;
+            --radius-sm: 10px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--dark);
+            background: var(--white);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ==================== HERO ==================== */
+        .hero {
+            background: linear-gradient(135deg, #E8612D 0%, #F4A261 50%, #E8612D 100%);
+            background-size: 200% 200%;
+            animation: gradientShift 8s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 30%, rgba(255,255,255,0.08) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            padding: 10px 24px;
+            border-radius: 50px;
+            color: white;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            color: white;
+            font-weight: 700;
+            line-height: 1.15;
+            max-width: 700px;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .hero-title em {
+            font-style: italic;
+            position: relative;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            color: rgba(255,255,255,0.92);
+            max-width: 550px;
+            margin-bottom: 40px;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .hero-stat {
+            text-align: center;
+            color: white;
+        }
+
+        .hero-stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        .hero-stat-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            opacity: 0.85;
+            font-weight: 500;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: white;
+            color: var(--orange-primary);
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+        }
+
+        .hero-cta svg {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .hero-cta:hover svg {
+            transform: translateY(3px);
+        }
+
+        .hero-author {
+            margin-top: 48px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            color: white;
+        }
+
+        .hero-author-avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            font-weight: 700;
+            border: 2px solid rgba(255,255,255,0.5);
+        }
+
+        .hero-author-name {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .hero-author-title {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            font-weight: 300;
+        }
+
+        /* ==================== INTRO ==================== */
+        .intro {
+            padding: 80px 24px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .intro h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 24px;
+            color: var(--dark);
+        }
+
+        .intro p {
+            font-size: 1.05rem;
+            color: var(--dark-secondary);
+            line-height: 1.9;
+            margin-bottom: 16px;
+        }
+
+        .highlight-box {
+            background: var(--orange-pale);
+            border-left: 4px solid var(--orange-primary);
+            padding: 24px 28px;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            margin: 32px 0;
+            text-align: left;
+        }
+
+        .highlight-box p {
+            color: var(--dark);
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+
+        .teal-box {
+            background: var(--teal-light);
+            border-left: 4px solid var(--teal);
+            padding: 24px 28px;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            margin: 32px 0;
+            text-align: left;
+        }
+
+        .teal-box p {
+            color: var(--dark);
+            margin-bottom: 0;
+        }
+
+        /* ==================== NAV RECIPES ==================== */
+        .recipe-nav {
+            background: var(--light-bg);
+            padding: 60px 24px;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+
+        .recipe-nav-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .recipe-nav h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .recipe-nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+        }
+
+        .recipe-nav-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: white;
+            padding: 16px 20px;
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            color: var(--dark);
+            transition: all 0.25s ease;
+            border: 1px solid #eee;
+        }
+
+        .recipe-nav-item:hover {
+            border-color: var(--orange-primary);
+            box-shadow: var(--shadow-sm);
+            transform: translateY(-2px);
+        }
+
+        .recipe-nav-number {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: var(--orange-pale);
+            color: var(--orange-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.95rem;
+            flex-shrink: 0;
+        }
+
+        .recipe-nav-info h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .recipe-nav-meta {
+            font-size: 0.78rem;
+            color: var(--dark-secondary);
+        }
+
+        /* ==================== RECIPE CARDS ==================== */
+        .recipes-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+
+        .recipe-card {
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-md);
+            margin-bottom: 48px;
+            overflow: hidden;
+            border: 1px solid #f0f0f0;
+            transition: box-shadow 0.3s ease;
+            scroll-margin-top: 24px;
+        }
+
+        .recipe-card:hover {
+            box-shadow: var(--shadow-lg);
+        }
+
+        .recipe-card-header {
+            background: linear-gradient(135deg, var(--orange-primary), var(--orange-light));
+            padding: 28px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .recipe-card-header-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .recipe-number {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: rgba(255,255,255,0.25);
+            backdrop-filter: blur(6px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: white;
+            border: 1px solid rgba(255,255,255,0.35);
+            flex-shrink: 0;
+        }
+
+        .recipe-card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: white;
+            font-weight: 600;
+        }
+
+        .recipe-badges {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .badge-cal {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .badge-prot {
+            background: white;
+            color: var(--orange-primary);
+        }
+
+        .recipe-card-body {
+            padding: 32px;
+        }
+
+        .recipe-columns {
+            display: grid;
+            grid-template-columns: 1fr 1.6fr;
+            gap: 32px;
+        }
+
+        @media (max-width: 640px) {
+            .recipe-columns {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .ingredients-section h4,
+        .steps-section h4 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--orange-primary);
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .ingredient-list {
+            list-style: none;
+        }
+
+        .ingredient-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #f5f5f5;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+        }
+
+        .ingredient-list li:last-child {
+            border-bottom: none;
+        }
+
+        .ingredient-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--orange-light);
+            flex-shrink: 0;
+            margin-top: 6px;
+        }
+
+        .ingredient-qty {
+            font-weight: 600;
+            color: var(--orange-primary);
+            white-space: nowrap;
+        }
+
+        .steps-list {
+            list-style: none;
+            counter-reset: step;
+        }
+
+        .steps-list li {
+            counter-increment: step;
+            padding: 10px 0 10px 42px;
+            position: relative;
+            font-size: 0.93rem;
+            line-height: 1.7;
+        }
+
+        .steps-list li::before {
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 28px;
+            height: 28px;
+            border-radius: 8px;
+            background: var(--orange-pale);
+            color: var(--orange-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.78rem;
+            font-weight: 700;
+        }
+
+        .steps-list li + li {
+            border-top: 1px solid #f8f8f8;
+        }
+
+        .step-highlight {
+            background: #FFFBE6;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .step-temp {
+            color: var(--orange-primary);
+            font-weight: 600;
+        }
+
+        .step-time {
+            color: var(--teal);
+            font-weight: 600;
+        }
+
+        .pro-tip {
+            background: linear-gradient(135deg, #FFF8F0, #FFF3E6);
+            border: 1px solid var(--orange-pale);
+            border-radius: var(--radius-sm);
+            padding: 16px 20px;
+            margin-top: 20px;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+
+        .pro-tip-icon {
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .pro-tip p {
+            font-size: 0.88rem;
+            color: var(--dark-secondary);
+            line-height: 1.6;
+        }
+
+        .pro-tip strong {
+            color: var(--orange-dark);
+        }
+
+        /* ==================== NUTRITION SUMMARY ==================== */
+        .nutrition-summary {
+            background: var(--light-bg);
+            padding: 80px 24px;
+            border-top: 1px solid #eee;
+        }
+
+        .nutrition-summary-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .nutrition-summary h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .nutrition-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nutrition-table thead {
+            background: var(--orange-primary);
+            color: white;
+        }
+
+        .nutrition-table th {
+            padding: 16px 20px;
+            text-align: left;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .nutrition-table td {
+            padding: 14px 20px;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 0.93rem;
+        }
+
+        .nutrition-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .nutrition-table tr:hover td {
+            background: var(--orange-bg);
+        }
+
+        .nutrition-table .recipe-name {
+            font-weight: 600;
+        }
+
+        .nutrition-table .cal-cell {
+            font-weight: 600;
+            color: var(--orange-primary);
+        }
+
+        .nutrition-table .prot-cell {
+            font-weight: 600;
+            color: var(--teal);
+        }
+
+        @media (max-width: 640px) {
+            .nutrition-table {
+                font-size: 0.85rem;
+            }
+            .nutrition-table th,
+            .nutrition-table td {
+                padding: 10px 12px;
+            }
+        }
+
+        /* ==================== CTA SECTION ==================== */
+        .cta-section {
+            background: linear-gradient(135deg, var(--orange-primary), #D4491A);
+            padding: 100px 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 80%, rgba(255,255,255,0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.06) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        .cta-inner {
+            max-width: 650px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-label {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 28px;
+            border: 1px solid rgba(255,255,255,0.25);
+        }
+
+        .cta-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 5vw, 2.8rem);
+            color: white;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .cta-text {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .cta-features {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .cta-feature {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            font-size: 0.95rem;
+        }
+
+        .cta-feature svg {
+            width: 20px;
+            height: 20px;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: white;
+            color: var(--orange-primary);
+            padding: 20px 48px;
+            border-radius: 50px;
+            font-size: 1.15rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 35px rgba(0,0,0,0.25);
+        }
+
+        .cta-button svg {
+            width: 22px;
+            height: 22px;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button:hover svg {
+            transform: translateX(4px);
+        }
+
+        .cta-guarantee {
+            margin-top: 24px;
+            color: rgba(255,255,255,0.75);
+            font-size: 0.88rem;
+        }
+
+        /* ==================== FOOTER ==================== */
+        .footer {
+            background: var(--dark);
+            color: rgba(255,255,255,0.6);
+            text-align: center;
+            padding: 40px 24px;
+            font-size: 0.85rem;
+        }
+
+        .footer a {
+            color: var(--orange-light);
+            text-decoration: none;
+        }
+
+        .footer-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        /* ==================== SCROLL PROGRESS ==================== */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: var(--orange-primary);
+            z-index: 1000;
+            transition: width 0.1s linear;
+        }
+
+        /* ==================== BACK TO TOP ==================== */
+        .back-to-top {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--orange-primary);
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-md);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background: var(--orange-dark);
+            transform: translateY(-3px);
+        }
+
+        /* ==================== ANIMATIONS ==================== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 768px) {
+            .hero {
+                min-height: auto;
+                padding: 60px 20px 80px;
+            }
+
+            .hero-stats {
+                gap: 24px;
+            }
+
+            .recipe-card-header {
+                padding: 20px 24px;
+            }
+
+            .recipe-card-body {
+                padding: 24px;
+            }
+
+            .recipe-card-title {
+                font-size: 1.15rem;
+            }
+
+            .cta-section {
+                padding: 60px 24px;
+            }
+
+            .cta-features {
+                gap: 16px;
+            }
+        }
+
+        /* ==================== DIVIDER ==================== */
+        .section-divider {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .section-divider span {
+            display: inline-block;
+            width: 60px;
+            height: 3px;
+            background: var(--orange-light);
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Scroll Progress -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero">
+    <div class="hero-badge">
+        &#127859; Guide offert — Édition 2025
+    </div>
+    <h1 class="hero-title">14 Recettes <em>Protéinées</em> Gourmandes</h1>
+    <p class="hero-subtitle">Des plats savoureux, riches en protéines et calibrés pour atteindre tes objectifs physiques — sans frustration.</p>
+
+    <div class="hero-stats">
+        <div class="hero-stat">
+            <span class="hero-stat-number">14</span>
+            <span class="hero-stat-label">Recettes</span>
+        </div>
+        <div class="hero-stat">
+            <span class="hero-stat-number">~480</span>
+            <span class="hero-stat-label">Kcal / plat</span>
+        </div>
+        <div class="hero-stat">
+            <span class="hero-stat-number">45g+</span>
+            <span class="hero-stat-label">Protéines</span>
+        </div>
+    </div>
+
+    <a href="#recipes" class="hero-cta">
+        Découvrir les recettes
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+    </a>
+
+    <div class="hero-author">
+        <div class="hero-author-avatar">MV</div>
+        <div>
+            <div class="hero-author-name">Mathilde Vion</div>
+            <div class="hero-author-title">Ingénieure Nutrition & Coach en ligne</div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== INTRO ==================== -->
+<section class="intro fade-in">
+    <h2>Manger protéiné ne veut pas dire manger triste.</h2>
+    <p>Ces 14 recettes ont été pensées pour te prouver qu'on peut atteindre ses objectifs tout en se faisant plaisir à chaque repas. Chaque plat est <strong>calibré entre 450 et 500 kcal</strong> avec <strong>38 à 50 g de protéines</strong>.</p>
+
+    <div class="highlight-box">
+        <p>&#128161; Chaque recette inclut les quantités exactes, températures précises, timings de cuisson et astuces pour un résultat parfait — même si tu débutes en cuisine.</p>
+    </div>
+
+    <p>Qu'il s'agisse de perte de poids, de prise de muscle propre ou simplement d'une alimentation plus équilibrée, ces recettes s'intègrent facilement dans ta semaine.</p>
+
+    <div class="teal-box">
+        <p>&#9989; Ingrédients accessibles &nbsp;&bull;&nbsp; Préparation rapide (15-30 min) &nbsp;&bull;&nbsp; Adaptable à tes goûts</p>
+    </div>
+</section>
+
+<!-- ==================== RECIPE NAV ==================== -->
+<section class="recipe-nav" id="recipes">
+    <div class="recipe-nav-inner fade-in">
+        <h2>Au menu</h2>
+        <div class="recipe-nav-grid">
+            <a href="#recipe-1" class="recipe-nav-item"><div class="recipe-nav-number">01</div><div class="recipe-nav-info"><h3>Galette complète bretonne</h3><div class="recipe-nav-meta">480 kcal · 42g prot</div></div></a>
+            <a href="#recipe-2" class="recipe-nav-item"><div class="recipe-nav-number">02</div><div class="recipe-nav-info"><h3>Burger bowl steak maison</h3><div class="recipe-nav-meta">490 kcal · 50g prot</div></div></a>
+            <a href="#recipe-3" class="recipe-nav-item"><div class="recipe-nav-number">03</div><div class="recipe-nav-info"><h3>Pizza protéinée base crème</h3><div class="recipe-nav-meta">500 kcal · 48g prot</div></div></a>
+            <a href="#recipe-4" class="recipe-nav-item"><div class="recipe-nav-number">04</div><div class="recipe-nav-info"><h3>Wrap poulet croustillant</h3><div class="recipe-nav-meta">480 kcal · 48g prot</div></div></a>
+            <a href="#recipe-5" class="recipe-nav-item"><div class="recipe-nav-number">05</div><div class="recipe-nav-info"><h3>Pommes de terre farcies raclette</h3><div class="recipe-nav-meta">500 kcal · 40g prot</div></div></a>
+            <a href="#recipe-6" class="recipe-nav-item"><div class="recipe-nav-number">06</div><div class="recipe-nav-info"><h3>Poulet satay + riz</h3><div class="recipe-nav-meta">500 kcal · 47g prot</div></div></a>
+            <a href="#recipe-7" class="recipe-nav-item"><div class="recipe-nav-number">07</div><div class="recipe-nav-info"><h3>Croque-monsieur protéiné</h3><div class="recipe-nav-meta">470 kcal · 45g prot</div></div></a>
+            <a href="#recipe-8" class="recipe-nav-item"><div class="recipe-nav-number">08</div><div class="recipe-nav-info"><h3>Poke bowl saumon</h3><div class="recipe-nav-meta">490 kcal · 38g prot</div></div></a>
+            <a href="#recipe-9" class="recipe-nav-item"><div class="recipe-nav-number">09</div><div class="recipe-nav-info"><h3>Tacos maison léger</h3><div class="recipe-nav-meta">500 kcal · 47g prot</div></div></a>
+            <a href="#recipe-10" class="recipe-nav-item"><div class="recipe-nav-number">10</div><div class="recipe-nav-info"><h3>Quesadilla jambon fromage</h3><div class="recipe-nav-meta">460 kcal · 42g prot</div></div></a>
+            <a href="#recipe-11" class="recipe-nav-item"><div class="recipe-nav-number">11</div><div class="recipe-nav-info"><h3>Wrap steak façon Big Mac</h3><div class="recipe-nav-meta">490 kcal · 48g prot</div></div></a>
+            <a href="#recipe-12" class="recipe-nav-item"><div class="recipe-nav-number">12</div><div class="recipe-nav-info"><h3>Gratin de pâtes protéiné</h3><div class="recipe-nav-meta">500 kcal · 45g prot</div></div></a>
+            <a href="#recipe-13" class="recipe-nav-item"><div class="recipe-nav-number">13</div><div class="recipe-nav-info"><h3>Wrap thon méditerranéen</h3><div class="recipe-nav-meta">450 kcal · 42g prot</div></div></a>
+            <a href="#recipe-14" class="recipe-nav-item"><div class="recipe-nav-number">14</div><div class="recipe-nav-info"><h3>Pizza wrap pepperoni healthy</h3><div class="recipe-nav-meta">470 kcal · 45g prot</div></div></a>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== RECIPES ==================== -->
+<section class="recipes-section">
+
+    <!-- RECIPE 1 -->
+    <article class="recipe-card fade-in" id="recipe-1">
+        <div class="recipe-card-header">
+            <div class="recipe-card-header-left">
+                <div class="recipe-number">01</div>
+                <h2 class="recipe-card-title">Galette complète bretonne</h2>
+            </div>
+            <div class="recipe-badges">
+                <span class="badge badge-cal">480 kcal</span>
+                <span class="badge badge-prot">42g protéines</span>
+            </div>
+        </div>
+        <div class="recipe-card-body">
+            <div class="recipe-columns">
+                <div class="ingredients-section">
+                    <h4>Ingrédients</h4>
+                    <ul class="ingredient-list">
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">1</span> galette sarrasin (60 g)</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">2</span> oeufs</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">80 g</span> jambon blanc</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">30 g</span> emmental light</li>
+                        <li><span class="ingredient-dot"></span>Spray cuisson</li>
+                    </ul>
+                </div>
+                <div class="steps-section">
+                    <h4>Préparation</h4>
+                    <ol class="steps-list">
+                        <li><strong>Préchauffe ta poêle</strong> antiadhésive à <span class="step-temp">feu moyen (6/10)</span>.</li>
+                        <li>Dépose la galette à sec et laisse-la chauffer <span class="step-time">45 secondes</span> pour la rendre souple.</li>
+                        <li>Vaporise légèrement le centre avec spray cuisson.</li>
+                        <li>Casse les 2 oeufs directement au centre.</li>
+                        <li>À l'aide du dos d'une cuillère, étale doucement le blanc vers les bords <span class="step-highlight">(ne casse pas le jaune si tu le veux coulant)</span>.</li>
+                        <li>Baisse légèrement le feu <span class="step-temp">(5/10)</span>.</li>
+                        <li>Dispose le jambon coupé en morceaux de manière homogène.</li>
+                        <li>Saupoudre l'emmental uniformément.</li>
+                        <li>Couvre la poêle <span class="step-time">1 minute</span> pour aider le fromage à fondre.</li>
+                        <li>Lorsque le blanc est pris (opaque) mais le jaune encore coulant, <strong>replie les 4 côtés</strong> vers le centre.</li>
+                        <li>Laisse cuire encore <span class="step-time">30 secondes</span> pour dorer légèrement dessous.</li>
+                        <li>Sers immédiatement.</li>
+                    </ol>
+                    <div class="pro-tip">
+                        <span class="pro-tip-icon">&#128293;</span>
+                        <p><strong>Astuce pro :</strong> Pour une galette encore plus croustillante, badigeonne un peu de beurre fondu sur les bords avant de replier.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- RECIPE 2 -->
+    <article class="recipe-card fade-in" id="recipe-2">
+        <div class="recipe-card-header">
+            <div class="recipe-card-header-left">
+                <div class="recipe-number">02</div>
+                <h2 class="recipe-card-title">Burger bowl steak maison</h2>
+            </div>
+            <div class="recipe-badges">
+                <span class="badge badge-cal">490 kcal</span>
+                <span class="badge badge-prot">50g protéines</span>
+            </div>
+        </div>
+        <div class="recipe-card-body">
+            <div class="recipe-columns">
+                <div class="ingredients-section">
+                    <h4>Ingrédients</h4>
+                    <ul class="ingredient-list">
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">120 g</span> steak 5%</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">200 g</span> pommes de terre</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">30 g</span> cheddar light</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">50 g</span> salade</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">50 g</span> skyr</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">10 g</span> ketchup</li>
+                    </ul>
+                </div>
+                <div class="steps-section">
+                    <h4>Préparation</h4>
+                    <ol class="steps-list">
+                        <li><strong>Préchauffe le four</strong> à <span class="step-temp">200°C chaleur tournante</span>.</li>
+                        <li>Lave les pommes de terre et coupe-les en <strong>cubes de 2 cm</strong>.</li>
+                        <li>Essuie-les dans un torchon pour enlever l'humidité <span class="step-highlight">(important pour le croustillant)</span>.</li>
+                        <li>Dispose-les sur papier cuisson sans les superposer.</li>
+                        <li>Enfourne <span class="step-time">25–30 min</span>. Retourne à mi-cuisson.</li>
+                        <li>Pendant ce temps, sors le steak <span class="step-time">10 min avant</span> cuisson (température ambiante).</li>
+                        <li>Chauffe une poêle bien chaude <span class="step-temp">(7/10)</span>.</li>
+                        <li>Cuire le steak <span class="step-time">2–3 min par face</span> pour une cuisson rosée.</li>
+                        <li>Dépose le cheddar sur le steak en fin de cuisson et couvre <span class="step-time">30 secondes</span> pour le faire fondre.</li>
+                        <li>Mélange skyr + ketchup pour la sauce.</li>
+                        <li>Dans un bol : salade, pommes de terre, steak tranché, sauce par-dessus.</li>
+                    </ol>
+                    <div class="pro-tip">
+                        <span class="pro-tip-icon">&#128293;</span>
+                        <p><strong>Astuce pro :</strong> Pour des patates ultra croustillantes, ajoute une pincée de semoule fine de maïs avant d'enfourner.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- RECIPE 3 -->
+    <article class="recipe-card fade-in" id="recipe-3">
+        <div class="recipe-card-header">
+            <div class="recipe-card-header-left">
+                <div class="recipe-number">03</div>
+                <h2 class="recipe-card-title">Pizza protéinée base crème</h2>
+            </div>
+            <div class="recipe-badges">
+                <span class="badge badge-cal">500 kcal</span>
+                <span class="badge badge-prot">48g protéines</span>
+            </div>
+        </div>
+        <div class="recipe-card-body">
+            <div class="recipe-columns">
+                <div class="ingredients-section">
+                    <h4>Ingrédients</h4>
+                    <ul class="ingredient-list">
+                        <li style="font-weight:600; color: var(--orange-primary); border-bottom: 2px solid var(--orange-pale); padding-bottom:4px;">Pâte</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">100 g</span> fromage blanc 0%</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">100 g</span> farine</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">5 g</span> levure</li>
+                        <li style="font-weight:600; color: var(--orange-primary); border-bottom: 2px solid var(--orange-pale); padding-bottom:4px; margin-top:8px;">Garniture</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">60 g</span> fromage blanc (assaisonné)</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">100 g</span> poulet cuit</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">30 g</span> mozzarella light</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">100 g</span> champignons</li>
+                    </ul>
+                </div>
+                <div class="steps-section">
+                    <h4>Préparation</h4>
+                    <ol class="steps-list">
+                        <li>Préchauffe le four à <span class="step-temp">180°C</span>.</li>
+                        <li>Dans un saladier, mélange fromage blanc + farine + levure.</li>
+                        <li>Pétris à la main <span class="step-time">2–3 minutes</span> jusqu'à obtention d'une boule souple <span class="step-highlight">(si collant → ajoute 5 g farine)</span>.</li>
+                        <li>Étale entre deux feuilles de papier cuisson <strong>(3 mm d'épaisseur)</strong>.</li>
+                        <li>Précuire <span class="step-time">8 minutes</span> seule.</li>
+                        <li>Pendant ce temps, coupe le poulet en petits dés.</li>
+                        <li>Mélange les 60 g de fromage blanc avec sel, poivre, ail en poudre.</li>
+                        <li>Sors la pâte précuite.</li>
+                        <li>Étale la base crème en couche fine.</li>
+                        <li>Ajoute poulet et champignons émincés.</li>
+                        <li>Termine par mozzarella.</li>
+                        <li>Remets au four <span class="step-time">10 min</span> jusqu'à ce que le fromage fonde et que les bords dorent.</li>
+                    </ol>
+                    <div class="pro-tip">
+                        <span class="pro-tip-icon">&#128293;</span>
+                        <p><strong>Astuce pro :</strong> La précuisson de la pâte est indispensable pour éviter un fond mou. Ne saute pas cette étape !</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- RECIPE 4 -->
+    <article class="recipe-card fade-in" id="recipe-4">
+        <div class="recipe-card-header">
+            <div class="recipe-card-header-left">
+                <div class="recipe-number">04</div>
+                <h2 class="recipe-card-title">Wrap poulet croustillant</h2>
+            </div>
+            <div class="recipe-badges">
+                <span class="badge badge-cal">480 kcal</span>
+                <span class="badge badge-prot">48g protéines</span>
+            </div>
+        </div>
+        <div class="recipe-card-body">
+            <div class="recipe-columns">
+                <div class="ingredients-section">
+                    <h4>Ingrédients</h4>
+                    <ul class="ingredient-list">
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">1</span> wrap complet</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">130 g</span> poulet</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">10 g</span> chapelure</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">½</span> oeuf battu</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">50 g</span> skyr</li>
+                    </ul>
+                </div>
+                <div class="steps-section">
+                    <h4>Préparation</h4>
+                    <ol class="steps-list">
+                        <li>Préchauffe le four à <span class="step-temp">200°C</span>.</li>
+                        <li>Coupe le poulet en lamelles régulières.</li>
+                        <li>Bat l'oeuf dans un bol.</li>
+                        <li>Trempe chaque morceau dans l'oeuf.</li>
+                        <li>Roule dans la chapelure en appuyant légèrement.</li>
+                        <li>Dispose sur plaque avec papier cuisson.</li>
+                        <li>Cuire <span class="step-time">15 min</span> jusqu'à doré <span class="step-highlight">(retourne à mi-cuisson)</span>.</li>
+                        <li>Mélange le skyr avec sel, poivre, paprika.</li>
+                        <li>Réchauffe le wrap <span class="step-time">20 secondes</span> à la poêle.</li>
+                        <li>Garnis, roule serré, puis <strong>repose-le 1 min à la poêle</strong> pour le croustillant.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- RECIPE 5 -->
+    <article class="recipe-card fade-in" id="recipe-5">
+        <div class="recipe-card-header">
+            <div class="recipe-card-header-left">
+                <div class="recipe-number">05</div>
+                <h2 class="recipe-card-title">Pommes de terre farcies raclette light</h2>
+            </div>
+            <div class="recipe-badges">
+                <span class="badge badge-cal">500 kcal</span>
+                <span class="badge badge-prot">40g protéines</span>
+            </div>
+        </div>
+        <div class="recipe-card-body">
+            <div class="recipe-columns">
+                <div class="ingredients-section">
+                    <h4>Ingrédients</h4>
+                    <ul class="ingredient-list">
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">250 g</span> pommes de terre</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">100 g</span> jambon blanc</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">50 g</span> skyr</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">30 g</span> fromage à raclette light</li>
+                        <li><span class="ingredient-dot"></span>Poivre</li>
+                    </ul>
+                </div>
+                <div class="steps-section">
+                    <h4>Préparation</h4>
+                    <ol class="steps-list">
+                        <li>Lave les pommes de terre sans les éplucher.</li>
+                        <li>Pique-les avec une fourchette.</li>
+                        <li>Enfourne <span class="step-time">40 min</span> à <span class="step-temp">200°C</span>.</li>
+                        <li>Vérifie cuisson <span class="step-highlight">(couteau doit entrer facilement)</span>.</li>
+                        <li>Coupe-les en deux.</li>
+                        <li>Creuse légèrement en gardant <strong>1 cm de chair</strong>.</li>
+                        <li>Mélange jambon coupé + skyr + poivre.</li>
+                        <li>Garnis généreusement.</li>
+                        <li>Ajoute fromage.</li>
+                        <li>Gratine <span class="step-time">8–10 min</span> jusqu'à doré.</li>
+                    </ol>
+                    <div class="pro-tip">
+                        <span class="pro-tip-icon">&#128293;</span>
+                        <p><strong>Astuce pro :</strong> Choisis des pommes de terre à chair farineuse (Bintje, Agata) pour un intérieur moelleux après cuisson au four.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- RECIPE 6 -->
+    <article class="recipe-card fade-in" id="recipe-6">
+        <div class="recipe-card-header">
+            <div class="recipe-card-header-left">
+                <div class="recipe-number">06</div>
+                <h2 class="recipe-card-title">Poulet satay healthy + riz</h2>
+            </div>
+            <div class="recipe-badges">
+                <span class="badge badge-cal">500 kcal</span>
+                <span class="badge badge-prot">47g protéines</span>
+            </div>
+        </div>
+        <div class="recipe-card-body">
+            <div class="recipe-columns">
+                <div class="ingredients-section">
+                    <h4>Ingrédients</h4>
+                    <ul class="ingredient-list">
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">130 g</span> poulet</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">70 g</span> riz cru</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">15 g</span> beurre de cacahuète</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">10 ml</span> sauce soja</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">½</span> citron vert</li>
+                    </ul>
+                </div>
+                <div class="steps-section">
+                    <h4>Préparation</h4>
+                    <ol class="steps-list">
+                        <li>Rince le riz sous l'eau froide.</li>
+                        <li>Porte une casserole d'eau à ébullition.</li>
+                        <li>Cuire <span class="step-time">10–12 min</span>. Égoutte et couvre <span class="step-time">5 min</span>.</li>
+                        <li>Coupe le poulet en <strong>cubes égaux</strong>.</li>
+                        <li>Chauffe poêle à <span class="step-temp">feu moyen-vif</span>.</li>
+                        <li>Saisis le poulet <span class="step-time">5–6 min</span> jusqu'à coloration.</li>
+                        <li>Mélange beurre de cacahuète + soja + citron + 1 c.à.s eau chaude.</li>
+                        <li>Verse dans la poêle.</li>
+                        <li>Laisse épaissir <span class="step-time">2 minutes</span> à feu doux.</li>
+                        <li>Servir chaud sur le riz.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- RECIPE 7 -->
+    <article class="recipe-card fade-in" id="recipe-7">
+        <div class="recipe-card-header">
+            <div class="recipe-card-header-left">
+                <div class="recipe-number">07</div>
+                <h2 class="recipe-card-title">Croque-monsieur protéiné</h2>
+            </div>
+            <div class="recipe-badges">
+                <span class="badge badge-cal">470 kcal</span>
+                <span class="badge badge-prot">45g protéines</span>
+            </div>
+        </div>
+        <div class="recipe-card-body">
+            <div class="recipe-columns">
+                <div class="ingredients-section">
+                    <h4>Ingrédients</h4>
+                    <ul class="ingredient-list">
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">2</span> tranches pain de mie complet</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">80 g</span> jambon blanc</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">40 g</span> fromage blanc 0%</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">30 g</span> emmental light</li>
+                        <li><span class="ingredient-dot"></span>Poivre, muscade</li>
+                    </ul>
+                </div>
+                <div class="steps-section">
+                    <h4>Préparation</h4>
+                    <ol class="steps-list">
+                        <li>Préchauffe four à <span class="step-temp">180°C</span>.</li>
+                        <li>Mélange fromage blanc + poivre + muscade.</li>
+                        <li>Tartine une fine couche sur les deux tranches.</li>
+                        <li>Ajoute jambon bien réparti.</li>
+                        <li>Ajoute fromage.</li>
+                        <li>Referme et appuie légèrement.</li>
+                        <li>Dépose sur grille avec papier cuisson.</li>
+                        <li>Cuire <span class="step-time">10 min</span> jusqu'à croustillant.</li>
+                        <li>Option : finir <span class="step-time">1 min</span> en <span class="step-temp">mode grill</span>.</li>
+                    </ol>
+                    <div class="pro-tip">
+                        <span class="pro-tip-icon">&#128293;</span>
+                        <p><strong>Astuce pro :</strong> Le fromage blanc remplace la béchamel classique, pour le même fondant avec beaucoup plus de protéines et moins de lipides.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <div class="section-divider"><span></span></div>
+
+    <!-- RECIPE 8 -->
+    <article class="recipe-card fade-in" id="recipe-8">
+        <div class="recipe-card-header">
+            <div class="recipe-card-header-left">
+                <div class="recipe-number">08</div>
+                <h2 class="recipe-card-title">Poke bowl saumon</h2>
+            </div>
+            <div class="recipe-badges">
+                <span class="badge badge-cal">490 kcal</span>
+                <span class="badge badge-prot">38g protéines</span>
+            </div>
+        </div>
+        <div class="recipe-card-body">
+            <div class="recipe-columns">
+                <div class="ingredients-section">
+                    <h4>Ingrédients</h4>
+                    <ul class="ingredient-list">
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">70 g</span> riz cru</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">100 g</span> saumon frais</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">70 g</span> avocat</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">100 g</span> concombre</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">10 ml</span> sauce soja</li>
+                    </ul>
+                </div>
+                <div class="steps-section">
+                    <h4>Préparation</h4>
+                    <ol class="steps-list">
+                        <li>Rincer le riz sous l'eau froide jusqu'à ce que l'eau soit claire.</li>
+                        <li>Porter une casserole d'eau à ébullition.</li>
+                        <li>Cuire le riz <span class="step-time">10–12 min</span> à feu moyen.</li>
+                        <li>Égoutter puis couvrir <span class="step-time">5 min</span> pour qu'il finisse de gonfler.</li>
+                        <li>Étaler le riz sur une assiette pour le tiédir <span class="step-highlight">(important pour ne pas cuire le saumon)</span>.</li>
+                        <li>Couper le saumon en cubes réguliers d'environ <strong>1,5 cm</strong>.</li>
+                        <li>Couper l'avocat en lamelles (citronner légèrement si besoin).</li>
+                        <li>Couper le concombre en petits dés.</li>
+                        <li>Déposer le riz au fond d'un bol.</li>
+                        <li>Disposer harmonieusement saumon, avocat et concombre.</li>
+                        <li>Verser la sauce soja juste avant de servir.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- RECIPE 9 -->
+    <article class="recipe-card fade-in" id="recipe-9">
+        <div class="recipe-card-header">
+            <div class="recipe-card-header-left">
+                <div class="recipe-number">09</div>
+                <h2 class="recipe-card-title">Tacos maison léger</h2>
+            </div>
+            <div class="recipe-badges">
+                <span class="badge badge-cal">500 kcal</span>
+                <span class="badge badge-prot">47g protéines</span>
+            </div>
+        </div>
+        <div class="recipe-card-body">
+            <div class="recipe-columns">
+                <div class="ingredients-section">
+                    <h4>Ingrédients</h4>
+                    <ul class="ingredient-list">
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">1</span> grande tortilla (70 g)</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">120 g</span> poulet</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">30 g</span> fromage râpé light</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">50 g</span> frites au four</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">40 g</span> skyr</li>
+                    </ul>
+                </div>
+                <div class="steps-section">
+                    <h4>Préparation</h4>
+                    <ol class="steps-list">
+                        <li>Préchauffer le four à <span class="step-temp">200°C</span>.</li>
+                        <li>Couper le poulet en morceaux fins.</li>
+                        <li>Le cuire <span class="step-time">6–7 min</span> à la poêle feu moyen-vif jusqu'à légère coloration.</li>
+                        <li>Cuire les frites au four <span class="step-time">20 min</span> jusqu'à croustillantes.</li>
+                        <li>Mélanger le skyr avec sel, poivre et paprika.</li>
+                        <li>Chauffer la tortilla <span class="step-time">20 secondes</span> à sec pour l'assouplir.</li>
+                        <li>Déposer au centre : poulet, frites, sauce, fromage.</li>
+                        <li>Replier les côtés puis rouler serré.</li>
+                        <li>Déposer dans une poêle chaude <span class="step-time">2 min par face</span> pour sceller et rendre croustillant.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- RECIPE 10 -->
+    <article class="recipe-card fade-in" id="recipe-10">
+        <div class="recipe-card-header">
+            <div class="recipe-card-header-left">
+                <div class="recipe-number">10</div>
+                <h2 class="recipe-card-title">Quesadilla jambon fromage</h2>
+            </div>
+            <div class="recipe-badges">
+                <span class="badge badge-cal">460 kcal</span>
+                <span class="badge badge-prot">42g protéines</span>
+            </div>
+        </div>
+        <div class="recipe-card-body">
+            <div class="recipe-columns">
+                <div class="ingredients-section">
+                    <h4>Ingrédients</h4>
+                    <ul class="ingredient-list">
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">2</span> tortillas moyennes</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">100 g</span> jambon blanc</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">40 g</span> fromage râpé light</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">50 g</span> skyr</li>
+                    </ul>
+                </div>
+                <div class="steps-section">
+                    <h4>Préparation</h4>
+                    <ol class="steps-list">
+                        <li>Chauffer une grande poêle à <span class="step-temp">feu moyen</span>.</li>
+                        <li>Déposer une tortilla.</li>
+                        <li>Étaler une fine couche de skyr.</li>
+                        <li>Ajouter le jambon coupé en petits morceaux.</li>
+                        <li>Parsemer uniformément le fromage.</li>
+                        <li>Recouvrir avec la seconde tortilla.</li>
+                        <li>Cuire <span class="step-time">3 minutes</span>.</li>
+                        <li>Retourner délicatement avec une spatule large.</li>
+                        <li>Cuire encore <span class="step-time">2–3 minutes</span> jusqu'à fromage fondu.</li>
+                        <li>Découper en triangles.</li>
+                    </ol>
+                    <div class="pro-tip">
+                        <span class="pro-tip-icon">&#128293;</span>
+                        <p><strong>Astuce pro :</strong> Pour retourner facilement, fais glisser la quesadilla sur une assiette, retourne l'assiette sur la poêle.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- RECIPE 11 -->
+    <article class="recipe-card fade-in" id="recipe-11">
+        <div class="recipe-card-header">
+            <div class="recipe-card-header-left">
+                <div class="recipe-number">11</div>
+                <h2 class="recipe-card-title">Wrap steak façon Big Mac</h2>
+            </div>
+            <div class="recipe-badges">
+                <span class="badge badge-cal">490 kcal</span>
+                <span class="badge badge-prot">48g protéines</span>
+            </div>
+        </div>
+        <div class="recipe-card-body">
+            <div class="recipe-columns">
+                <div class="ingredients-section">
+                    <h4>Ingrédients</h4>
+                    <ul class="ingredient-list">
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">1</span> wrap complet</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">120 g</span> steak 5%</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">30 g</span> cheddar light</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">60 g</span> skyr</li>
+                        <li><span class="ingredient-dot"></span>Cornichons, moutarde, paprika</li>
+                    </ul>
+                </div>
+                <div class="steps-section">
+                    <h4>Préparation</h4>
+                    <ol class="steps-list">
+                        <li>Sortir le steak <span class="step-time">10 min avant</span> cuisson.</li>
+                        <li>Chauffer une poêle à <span class="step-temp">feu vif</span>.</li>
+                        <li>Cuire le steak <span class="step-time">2–3 min par face</span>.</li>
+                        <li>Déposer le cheddar dessus en fin de cuisson et couvrir <span class="step-time">30 secondes</span>.</li>
+                        <li>Mélanger skyr + moutarde + paprika.</li>
+                        <li>Réchauffer le wrap <span class="step-time">20 secondes</span>.</li>
+                        <li>Étaler la sauce.</li>
+                        <li>Ajouter steak coupé en morceaux.</li>
+                        <li>Ajouter cornichons en rondelles.</li>
+                        <li>Rouler serré.</li>
+                        <li>Repasser <span class="step-time">1–2 min</span> à la poêle pour le croustillant.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- RECIPE 12 -->
+    <article class="recipe-card fade-in" id="recipe-12">
+        <div class="recipe-card-header">
+            <div class="recipe-card-header-left">
+                <div class="recipe-number">12</div>
+                <h2 class="recipe-card-title">Gratin de pâtes protéiné</h2>
+            </div>
+            <div class="recipe-badges">
+                <span class="badge badge-cal">500 kcal</span>
+                <span class="badge badge-prot">45g protéines</span>
+            </div>
+        </div>
+        <div class="recipe-card-body">
+            <div class="recipe-columns">
+                <div class="ingredients-section">
+                    <h4>Ingrédients</h4>
+                    <ul class="ingredient-list">
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">70 g</span> pâtes crues</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">120 g</span> poulet</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">100 g</span> sauce tomate</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">100 g</span> fromage blanc</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">30 g</span> mozzarella light</li>
+                    </ul>
+                </div>
+                <div class="steps-section">
+                    <h4>Préparation</h4>
+                    <ol class="steps-list">
+                        <li>Porter une grande casserole d'eau à ébullition. Saler légèrement.</li>
+                        <li>Cuire les pâtes <span class="step-highlight">1 minute de moins</span> que le temps indiqué (elles finiront au four).</li>
+                        <li>Égoutter.</li>
+                        <li>Couper le poulet en petits dés.</li>
+                        <li>Le cuire <span class="step-time">6 min</span> à la poêle <span class="step-temp">feu moyen</span>.</li>
+                        <li>Mélanger pâtes + poulet + sauce tomate + fromage blanc.</li>
+                        <li>Verser dans un plat allant au four.</li>
+                        <li>Ajouter mozzarella sur le dessus.</li>
+                        <li>Gratiner <span class="step-time">15 min</span> à <span class="step-temp">180°C</span> jusqu'à léger doré.</li>
+                    </ol>
+                    <div class="pro-tip">
+                        <span class="pro-tip-icon">&#128293;</span>
+                        <p><strong>Astuce pro :</strong> Cuire les pâtes al dente (1 min de moins) est la clé d'un gratin réussi — elles absorbent la sauce au four sans devenir trop molles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- RECIPE 13 -->
+    <article class="recipe-card fade-in" id="recipe-13">
+        <div class="recipe-card-header">
+            <div class="recipe-card-header-left">
+                <div class="recipe-number">13</div>
+                <h2 class="recipe-card-title">Wrap thon méditerranéen</h2>
+            </div>
+            <div class="recipe-badges">
+                <span class="badge badge-cal">450 kcal</span>
+                <span class="badge badge-prot">42g protéines</span>
+            </div>
+        </div>
+        <div class="recipe-card-body">
+            <div class="recipe-columns">
+                <div class="ingredients-section">
+                    <h4>Ingrédients</h4>
+                    <ul class="ingredient-list">
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">1</span> wrap complet</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">120 g</span> thon au naturel (égoutté)</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">60 g</span> fromage blanc</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">50 g</span> concombre</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">10 g</span> olives</li>
+                    </ul>
+                </div>
+                <div class="steps-section">
+                    <h4>Préparation</h4>
+                    <ol class="steps-list">
+                        <li>Égoutter soigneusement le thon.</li>
+                        <li>L'émietter à la fourchette.</li>
+                        <li>Mélanger avec fromage blanc + poivre + citron.</li>
+                        <li>Couper concombre en petits dés.</li>
+                        <li>Couper olives en rondelles fines.</li>
+                        <li>Réchauffer le wrap <span class="step-time">20 secondes</span>.</li>
+                        <li>Étaler la préparation au centre.</li>
+                        <li>Ajouter concombre et olives.</li>
+                        <li>Rouler serré en rabattant les côtés.</li>
+                        <li>Option : toaster <span class="step-time">1 minute</span> pour plus de tenue.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- RECIPE 14 -->
+    <article class="recipe-card fade-in" id="recipe-14">
+        <div class="recipe-card-header">
+            <div class="recipe-card-header-left">
+                <div class="recipe-number">14</div>
+                <h2 class="recipe-card-title">Pizza wrap pepperoni healthy</h2>
+            </div>
+            <div class="recipe-badges">
+                <span class="badge badge-cal">470 kcal</span>
+                <span class="badge badge-prot">45g protéines</span>
+            </div>
+        </div>
+        <div class="recipe-card-body">
+            <div class="recipe-columns">
+                <div class="ingredients-section">
+                    <h4>Ingrédients</h4>
+                    <ul class="ingredient-list">
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">1</span> wrap complet</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">100 g</span> coulis tomate</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">100 g</span> poulet cuit</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">30 g</span> mozzarella light</li>
+                        <li><span class="ingredient-dot"></span><span class="ingredient-qty">20 g</span> chorizo léger</li>
+                    </ul>
+                </div>
+                <div class="steps-section">
+                    <h4>Préparation</h4>
+                    <ol class="steps-list">
+                        <li>Préchauffer le four à <span class="step-temp">180°C</span>.</li>
+                        <li>Déposer le wrap sur une plaque avec papier cuisson.</li>
+                        <li>Étaler le coulis en fine couche <span class="step-highlight">(laisser 1 cm sur les bords)</span>.</li>
+                        <li>Répartir le poulet en petits morceaux.</li>
+                        <li>Ajouter le chorizo en fines rondelles.</li>
+                        <li>Terminer par mozzarella uniformément.</li>
+                        <li>Cuire <span class="step-time">8–10 min</span> jusqu'à fromage fondu.</li>
+                        <li>Passer <span class="step-time">1 minute</span> en <span class="step-temp">mode grill</span> pour un bord croustillant.</li>
+                    </ol>
+                    <div class="pro-tip">
+                        <span class="pro-tip-icon">&#128293;</span>
+                        <p><strong>Astuce pro :</strong> Surveille bien le mode grill, ça passe de doré à brûlé en quelques secondes. Reste devant le four.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+</section>
+
+<!-- ==================== NUTRITION SUMMARY ==================== -->
+<section class="nutrition-summary">
+    <div class="nutrition-summary-inner fade-in">
+        <h2>Tableau récapitulatif</h2>
+        <div style="overflow-x: auto;">
+            <table class="nutrition-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Recette</th>
+                        <th>Calories</th>
+                        <th>Protéines</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>01</td><td class="recipe-name">Galette complète bretonne</td><td class="cal-cell">480 kcal</td><td class="prot-cell">42 g</td></tr>
+                    <tr><td>02</td><td class="recipe-name">Burger bowl steak maison</td><td class="cal-cell">490 kcal</td><td class="prot-cell">50 g</td></tr>
+                    <tr><td>03</td><td class="recipe-name">Pizza protéinée base crème</td><td class="cal-cell">500 kcal</td><td class="prot-cell">48 g</td></tr>
+                    <tr><td>04</td><td class="recipe-name">Wrap poulet croustillant</td><td class="cal-cell">480 kcal</td><td class="prot-cell">48 g</td></tr>
+                    <tr><td>05</td><td class="recipe-name">Pommes de terre farcies raclette</td><td class="cal-cell">500 kcal</td><td class="prot-cell">40 g</td></tr>
+                    <tr><td>06</td><td class="recipe-name">Poulet satay + riz</td><td class="cal-cell">500 kcal</td><td class="prot-cell">47 g</td></tr>
+                    <tr><td>07</td><td class="recipe-name">Croque-monsieur protéiné</td><td class="cal-cell">470 kcal</td><td class="prot-cell">45 g</td></tr>
+                    <tr><td>08</td><td class="recipe-name">Poke bowl saumon</td><td class="cal-cell">490 kcal</td><td class="prot-cell">38 g</td></tr>
+                    <tr><td>09</td><td class="recipe-name">Tacos maison léger</td><td class="cal-cell">500 kcal</td><td class="prot-cell">47 g</td></tr>
+                    <tr><td>10</td><td class="recipe-name">Quesadilla jambon fromage</td><td class="cal-cell">460 kcal</td><td class="prot-cell">42 g</td></tr>
+                    <tr><td>11</td><td class="recipe-name">Wrap steak façon Big Mac</td><td class="cal-cell">490 kcal</td><td class="prot-cell">48 g</td></tr>
+                    <tr><td>12</td><td class="recipe-name">Gratin de pâtes protéiné</td><td class="cal-cell">500 kcal</td><td class="prot-cell">45 g</td></tr>
+                    <tr><td>13</td><td class="recipe-name">Wrap thon méditerranéen</td><td class="cal-cell">450 kcal</td><td class="prot-cell">42 g</td></tr>
+                    <tr><td>14</td><td class="recipe-name">Pizza wrap pepperoni healthy</td><td class="cal-cell">470 kcal</td><td class="prot-cell">45 g</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== CTA ==================== -->
+<section class="cta-section">
+    <div class="cta-inner fade-in">
+        <div class="cta-label">Prochaine étape</div>
+        <h2 class="cta-title">Tu veux aller plus loin ?</h2>
+        <p class="cta-text">
+            Ces 14 recettes, c'est un avant-goût de ce qu'une alimentation adaptée à tes objectifs peut te permettre. Si tu veux un accompagnement <strong>personnalisé</strong> et un plan sur mesure, réserve ton bilan offert avec Mathilde ou un membre de son équipe.
+        </p>
+        <div class="cta-features">
+            <div class="cta-feature">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+                Offert
+            </div>
+            <div class="cta-feature">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+                Sans engagement
+            </div>
+            <div class="cta-feature">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+                100% personnalisé
+            </div>
+        </div>
+        <a href="https://calendly.com/laroussefit/bilan-offert" target="_blank" rel="noopener" class="cta-button">
+            Réserver mon bilan offert
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <p class="cta-guarantee">Aucune carte bancaire requise &middot; Appel de 45 minutes avec Mathilde ou un membre de son équipe</p>
+    </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+    <div class="footer-brand">Larousse Fit</div>
+    <p>Mathilde Vion &mdash; Ingénieure Nutrition & Coach en ligne</p>
+    <p style="margin-top: 16px; font-size: 0.78rem; opacity: 0.5;">&copy; 2025 Larousse Fit. Tous droits réservés.</p>
+</footer>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script>
+    // Scroll progress bar
+    window.addEventListener('scroll', () => {
+        const scrollTop = document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const progress = (scrollTop / scrollHeight) * 100;
+        document.getElementById('scrollProgress').style.width = progress + '%';
+
+        // Back to top button
+        const btn = document.getElementById('backToTop');
+        if (scrollTop > 600) {
+            btn.classList.add('visible');
+        } else {
+            btn.classList.remove('visible');
+        }
+    });
+
+    document.getElementById('backToTop').addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Fade-in on scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
